@@ -1,10 +1,11 @@
 <script>
   import { Router, Route } from "svelte-routing";
-  import Landing from "./routes/Landing.svelte";
-
+  import Register from "./routes/Register.svelte";
+  
   export let url = "";
 </script>
 
 <Router {url}>
-  <Route path="/" component={Landing} />
+  <Route path="/register" component={Register} />
+  
 </Router>
