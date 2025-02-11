@@ -11,4 +11,6 @@
   <Route path="/register" component={Register} />
   <Route path="/login" component={Login} />
   <Route path="/dashboard" component={Dashboard} />
+  <Route path="/dashboard/:query" component={Dashboard} />
+  <Route path="/*" component={Login} />
 </Router>

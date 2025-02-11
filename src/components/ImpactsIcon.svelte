@@ -1,4 +1,10 @@
 <script>
+
+  import RoadIcon from '/icons/road.svg';
+  import SidewalkIcon from '/icons/sidewalk.svg';
+  import CyclingLaneIcon from '/icons/cycling_lane.svg';
+  import PublicTransportIcon from '/icons/public_transport.svg';
+
   export let type;
 
   let bgColor = {
@@ -20,17 +26,17 @@
   let tooltipText = tooltips[type];
 </script>
 
-<div class="w-6 h-6 p-1 {selectedBgColor} rounded-lg flex items-center justify-center cursor-pointer" title={tooltipText}>
+<div class="impacts-{type} w-6 h-6 p-1 {selectedBgColor} rounded-lg flex items-center justify-center cursor-pointer" title={tooltipText}>
   {#if type === 'road'}
-    <img src="icons/road.svg" alt="R" class="w-full" />
+    <img src={RoadIcon} alt="R" class="w-full" />
   {/if}
   {#if type === 'sidewalk'}
-    <img src="icons/sidewalk.svg" alt="S" class="w-full" />
+    <img src={SidewalkIcon} alt="S" class="w-full" />
   {/if}
   {#if type === 'cycling_lane'}
-    <img src="icons/cycling_lane.svg" alt="C" class="w-full" />
+    <img src={CyclingLaneIcon} alt="C" class="w-full" />
   {/if}
   {#if type === 'public_transport'}
-    <img src="icons/public_transport.svg" alt="P" class="w-full" />
+    <img src={PublicTransportIcon} alt="P" class="w-full" />
   {/if}
 </div>
