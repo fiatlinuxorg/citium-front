@@ -3,8 +3,12 @@ import { navigate } from "svelte-routing";
 
 const postTo = async (path, data) => {
   try {
-    const response = await connection.post(path, data);
-    return response.data;
+    const response = await connection.post(path, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    return response;
   } catch (error) {
     navigate("/login");
     throw error;
@@ -14,7 +18,7 @@ const postTo = async (path, data) => {
 const getFrom = async (path) => {
   try {
     const response = await connection.get(path);
-    return response.data;
+    return response;
   } catch (error) {
     navigate("/login");
     throw error;
@@ -24,7 +28,7 @@ const getFrom = async (path) => {
 const deleteFrom = async (path) => {
   try {
     const response = await connection.delete(path);
-    return response.data;
+    return response;
   } catch (error) {
     navigate("/login");
     throw error;
@@ -34,7 +38,7 @@ const deleteFrom = async (path) => {
 const putTo = async (path, data) => {
   try {
     const response = await connection.put(path, data);
-    return response.data;
+    return response;
   } catch (error) {
     navigate("/login");
     throw error;

@@ -129,7 +129,7 @@
           </div>
         </div>
         <div class="flex mb-4">
-          <button type="submit" class="bg-primary w-full px-1 py-2 xl:px-3 xl:py-4 rounded-lg font-bold text-light text-lg" on:click={register}>Registrati</button>
+          <button type="submit" class="bg-primary w-full px-1 py-2 xl:px-3 xl:py-4 rounded-lg font-bold text-light text-lg" on:click={register}>REGISTRATI</button>
         </div>
         {#if errorMessage}
           <div class="flex justify-center mb-4">

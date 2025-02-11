@@ -46,7 +46,6 @@
 
       switch (response.status) {
         case 200:
-          console.log(response.data);
           navigate("/dashboard");
           break;
         case 400:
